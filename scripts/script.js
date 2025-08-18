@@ -100,8 +100,6 @@ console.log(mainBody)
 
 //======================================================================================================
 
-// Add eventlistner
-
 // Use Document Fragment or cloneNode method to create templated content
 
 // Use at least two BOM properties or methods
@@ -127,17 +125,32 @@ featuresLastDivs.forEach(p => {
 
 //======================================================================================================
 
-//Event-based JS Validations
+// Event-based JS Validations: 
+// Included buttons, dropdown items in the sign up. e.g. vaccinated or not? If the puppy is not vaccinated, pop up an alert using event listener
 
-// Include buttons, dropdown items in the sign up. e.g. vaccinated or not? age (with limit), personality of the dog. If the puppy is not vaccinated, pop up an alert
+// let vaccinationForm = document.getElementById("vaccinationForm");
 
+// function handleVaccinationCheck (event) {
+//     if(vaccinationForm.value === "No") {
+//         event.preventDefault();
+//         alert("Sorry, you can not proceed without vaccination");
+//     }
+// }
+// vaccinationForm.addEventListener("change", handleVaccinationCheck);
 
-let vaccinationForm = document.getElementById("vaccinationForm");
-console.log(vaccinationForm);
-function handleVaccinationCheck (event) {
-    if(vaccinationForm.value === "No") {
-        alert("Sorry, you can not proceed without vaccination");
-    }
+//======================================================================================================
+// Let's use some BOM methods to assign alerts
+const FindPuppyDate = document.getElementById("FindPuppyDate");
+const PuppyDateMatches = document.getElementById("PuppyDateMatches");
+
+FindPuppyDate.addEventListener("click", function(event) {
+    if(event.target.id === "FindPuppyDate")
+    alert("Coming soon...stay tuned!")
 }
+);
 
-vaccinationForm.addEventListener("change",handleVaccinationCheck);
+PuppyDateMatches.addEventListener("click", function(event) {
+    if(event.target.id === "PuppyDateMatches")
+    alert("Coming soon...stay tuned!")
+}
+);

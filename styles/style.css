@@ -53,7 +53,7 @@ html, body {
 }
 
 #heroImg {
-    margin: 10px;
+    margin: auto;
     padding: 10px;
     border: 1px solid rgba(68, 0, 255, 0.281);
 }
@@ -61,7 +61,6 @@ html, body {
 #heroTxt{
     margin: 10px 20px 10px 0px;
     padding: 10px;
-    width: 50%;
 }
 
 
