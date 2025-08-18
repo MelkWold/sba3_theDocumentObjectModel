@@ -1,6 +1,6 @@
 // Let's cache the tagline element and modify its text content 
 let signInEl = document.getElementById("tagLine");
-console.log(signInEl.textContent);
+console.log(signInEl);
 // Let's change the text contents
 signInEl.textContent = "Personalized Playdate Finder for your Puppy"
 console.log(signInEl.textContent);
@@ -91,8 +91,12 @@ console.log(section);
 // Now, let's add the section to the HTML before the features section
 const featuresSection = document.querySelector("section.features")
 console.log(featuresSection);
-document.body.insertBefore(section, featuresSection);
-console.log(document.body)
+let mainBody = document.getElementById("mainBody");
+if(mainBody && featuresSection){
+    mainBody.insertBefore(section, featuresSection);
+}
+
+console.log(mainBody)
 
 //======================================================================================================
 
@@ -126,3 +130,4 @@ featuresLastDivs.forEach(p => {
 //Event-based JS Validations
 const signupForm = document.getElementById("signUpForm");
 console.log(signupForm)
+// Include buttons, dropdown items in the sign up. e.g. vaccinated or not? age (with limit), personality of the dog
