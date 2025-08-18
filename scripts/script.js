@@ -93,3 +93,35 @@ const featuresSection = document.querySelector("section.features")
 console.log(featuresSection);
 document.body.insertBefore(section, featuresSection);
 console.log(document.body)
+
+//======================================================================================================
+
+//HTML and JS based Validations
+
+
+// Add eventlistner
+
+// Use Document Fragment or cloneNode method to create templated content
+
+// Use at least two BOM properties or methods
+
+
+//Iterate over a collection of elements to accomplish some task
+// Let's modify the font type and font size of the paragraph elements in the footer section
+footerEl = document.querySelectorAll(".footer div p");
+footerEl. forEach (p => {
+    p.style.fontFamily = "Inter";
+    p.style.fontSize = "20px"
+}) 
+
+console.log(footerEl);
+
+// Use the parent-child-sibling relatinship to navigate between elements at least once (firstChild, lastChild, parentNode, nextElementSibling)
+// Let's update the content of the last phrase of the features section
+let featuresLastDivs = document.querySelectorAll(".card-footer");
+featuresLastDivs.forEach(p => {
+    p.textContent = "Here to please!"
+})
+
+
+//======================================================================================================
