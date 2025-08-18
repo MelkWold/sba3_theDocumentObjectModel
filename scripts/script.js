@@ -38,13 +38,17 @@ console.log(p);
 let img = document.createElement("img");
 img.id = "heroImg";
 img.alt = "brand image";
-img.src = "./images/puppyWalk_hvua.svg";
-img.width = "400px"
+let imgLink = "../images/puppyWalk_hvua.svg"
+img.src = imgLink;
+img.width = 400;
 
 console.log(img)
 
+// let's add h1 to section
+section.append(h1);
+
 // let's add the new elements to div 1
-div1.append(h1, p, img);
+div1.append(p, img);
 console.log(div1)
 
 // now append div1 to section as child
