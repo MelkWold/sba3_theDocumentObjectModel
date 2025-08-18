@@ -102,7 +102,7 @@ console.log(mainBody)
 
 // Use Document Fragment or cloneNode method to create templated content
 
-// Use at least two BOM properties or methods
+
 
 
 //Iterate over a collection of elements to accomplish some task
@@ -128,17 +128,19 @@ featuresLastDivs.forEach(p => {
 // Event-based JS Validations: 
 // Included buttons, dropdown items in the sign up. e.g. vaccinated or not? If the puppy is not vaccinated, pop up an alert using event listener
 
-// let vaccinationForm = document.getElementById("vaccinationForm");
+let vaccinationForm = document.getElementById("vaccinationForm");
 
-// function handleVaccinationCheck (event) {
-//     if(vaccinationForm.value === "No") {
-//         event.preventDefault();
-//         alert("Sorry, you can not proceed without vaccination");
-//     }
-// }
-// vaccinationForm.addEventListener("change", handleVaccinationCheck);
+function handleVaccinationCheck (event) {
+    if(vaccinationForm.value === "No") {
+        event.preventDefault();
+        alert("Sorry, you can not proceed without vaccination");
+    }
+}
+vaccinationForm.addEventListener("change", handleVaccinationCheck);
 
 //======================================================================================================
+
+// Use at least two BOM properties or methods
 // Let's use some BOM methods to assign alerts
 const FindPuppyDate = document.getElementById("FindPuppyDate");
 const PuppyDateMatches = document.getElementById("PuppyDateMatches");

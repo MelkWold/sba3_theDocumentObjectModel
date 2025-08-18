@@ -17,8 +17,8 @@ html, body {
 
 #navbar-list {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: center;
+    gap: 10px;
     border-top: 20px;
     margin-top: 20px;
 }
