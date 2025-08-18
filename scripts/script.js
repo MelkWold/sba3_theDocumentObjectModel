@@ -96,9 +96,6 @@ console.log(document.body)
 
 //======================================================================================================
 
-//HTML and JS based Validations
-
-
 // Add eventlistner
 
 // Use Document Fragment or cloneNode method to create templated content
@@ -125,3 +122,7 @@ featuresLastDivs.forEach(p => {
 
 
 //======================================================================================================
+
+//Event-based JS Validations
+const signupForm = document.getElementById("signUpForm");
+console.log(signupForm)
