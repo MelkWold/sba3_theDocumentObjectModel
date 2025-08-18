@@ -40,12 +40,12 @@
         </p>
         <br />
         <div>
-          <label for="username">Username: </label>
+          <label for="puppyname">Puppyname: </label>
           <input
             type="text"
-            id="username"
-            name="username"
-            placeholder="Enter your username"
+            id="puppyname"
+            name="puppyname"
+            placeholder="Enter the puppyname"
             required
           />
         </div>
@@ -62,7 +62,7 @@
         </div>
 
         <div>
-          <label for="confirmEmail">Confirm your Email: </label>
+          <label for="confirmEmail">Confirm Email: </label>
           <input
             type="email"
             id="confirmEmail"
@@ -86,7 +86,7 @@
           />
         </div>
         <div>
-          <label for="confirmPassword">Confirm your Password: </label>
+          <label for="confirmPassword">Confirm Password: </label>
           <input
             type="password"
             id="confirmPassword"
@@ -96,9 +96,40 @@
             required
           />
         </div>
+        <br>
+        
+        <div>
+          <h6>Vaccination</h6>
+          <select id = "vaccinationForm" class="form-select form-select-sm w-25" aria-label="Small select example" required>
+            <option selected>Vaccination</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+  
         <br />
-        <button type="submit" class="btn btn-primary">Sign Up</button>
+
+        <div>
+          <select class="form-select form-select-sm w-25" aria-label="Small select example" required>
+            <option selected disabled>Select puppy breed</option>
+            <option value="1">Labrador Retriever</option>
+            <option value="2">Golden Retriever</option>
+            <option value="3">French Bulldog</option>
+            <option value="4">Poodle</option>
+            <option value="5">Beagle</option>
+            <option value="6">Rottweilder</option>
+            <option value="7">Dachshund</option>
+            <option value="8">Yorkshire Terrier</option>
+            <option value="9">Boxer</option>
+          </select>
+        </div>
+          
+    
+        <br />
+        <button type="submit" id = "signUpButton" class="btn btn-primary">Sign Up</button>
       </form>
+    </div>
+    </form>
     </div>
 
     <script src="../scripts/script.js"></script>

@@ -128,6 +128,16 @@ featuresLastDivs.forEach(p => {
 //======================================================================================================
 
 //Event-based JS Validations
-const signupForm = document.getElementById("signUpForm");
-console.log(signupForm)
-// Include buttons, dropdown items in the sign up. e.g. vaccinated or not? age (with limit), personality of the dog
+
+// Include buttons, dropdown items in the sign up. e.g. vaccinated or not? age (with limit), personality of the dog. If the puppy is not vaccinated, pop up an alert
+
+
+let vaccinationForm = document.getElementById("vaccinationForm");
+console.log(vaccinationForm);
+function handleVaccinationCheck (event) {
+    if(vaccinationForm.value === "No") {
+        alert("Sorry, you can not proceed without vaccination");
+    }
+}
+
+vaccinationForm.addEventListener("change",handleVaccinationCheck);
