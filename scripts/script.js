@@ -5,10 +5,6 @@ console.log(signInEl);
 signInEl.textContent = "Personalized Playdate Finder for your Puppy"
 console.log(signInEl.textContent);
 
-//Now, let's cache the icon images from the features section and change their size
-
-// let featureImgs = document.querySelectorAll("section.features > img");
-// console.log(featureImgs);
 //======================================================================================================
 
 // Let's create a new hero section and new elements and add them to the Hero section
@@ -100,10 +96,6 @@ console.log(mainBody)
 
 //======================================================================================================
 
-// Use Document Fragment or cloneNode method to create templated content
-
-
-
 
 //Iterate over a collection of elements to accomplish some task
 // Let's modify the font type and font size of the paragraph elements in the footer section
@@ -122,13 +114,16 @@ featuresLastDivs.forEach(p => {
     p.textContent = "Here to please!"
 })
 
-
 //======================================================================================================
 
 // Event-based JS Validations: 
 // Included buttons, dropdown items in the sign up. e.g. vaccinated or not? If the puppy is not vaccinated, pop up an alert using event listener
-
 let vaccinationForm = document.getElementById("vaccinationForm");
+
+
+if (vaccinationForm) {
+    vaccinationForm.addEventListener("change", handleVaccinationCheck);
+}
 
 function handleVaccinationCheck (event) {
     if(vaccinationForm.value === "No") {
@@ -136,23 +131,50 @@ function handleVaccinationCheck (event) {
         alert("Sorry, you can not proceed without vaccination");
     }
 }
-vaccinationForm.addEventListener("change", handleVaccinationCheck);
+
 
 //======================================================================================================
 
 // Use at least two BOM properties or methods
 // Let's use some BOM methods to assign alerts
+
 const FindPuppyDate = document.getElementById("FindPuppyDate");
-const PuppyDateMatches = document.getElementById("PuppyDateMatches");
 
-FindPuppyDate.addEventListener("click", function(event) {
-    if(event.target.id === "FindPuppyDate")
-    alert("Coming soon...stay tuned!")
-}
-);
+if(FindPuppyDate) {
+    FindPuppyDate.addEventListener("click", function() {
+        alert("Coming soon...stay tuned!");
+});
+};
+// another BOM property to alert users about display
+window.addEventListener("load", () => {
+    if(window.innerWidth < 500) {
+        alert("Some features may look different at your screen size.");
+    }
+});
 
-PuppyDateMatches.addEventListener("click", function(event) {
-    if(event.target.id === "PuppyDateMatches")
-    alert("Coming soon...stay tuned!")
-}
-);
+//======================================================================================================
+// Use Document Fragment or cloneNode method to create templated content
+// Let's use a document fragment to add some content to the PuppyDate page
+let matches = document.getElementById("matches");
+if (matches) {
+let docFrag = document.createDocumentFragment();
+
+let h1Matches = document.createElement('h1');
+h1Matches.textContent = "Welcome to the matches page";
+
+let imgMatches = document.createElement("img");
+
+imgMatches.src = "../images/puppyWalk_hvua.svg";
+
+let pMatches = document.createElement("p");
+pMatches.textContent = "In this page, you will receive personalized matches for your puppy playdate based on the personality, breed, age and other personal features of your puppy. The page is currently under construction. Stay tuned and stay in touch!"
+pMatches.style.fontSize= "30px";
+pMatches.style.color= "blue"
+
+docFrag.append(h1Matches, imgMatches, pMatches);
+
+matches.appendChild(docFrag);
+
+console.log(matches);
+};
+//======================================================================================================
