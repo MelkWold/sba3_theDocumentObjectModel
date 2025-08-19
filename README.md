@@ -11,6 +11,7 @@ Approach:
 The website is built from scratch using some HTML initial pages. Some components of the final HTML pages are prepared added into the DOM dynamically using JavaScript. The comments in the JavaScript script provide some context on the development process. 
 
 `Reflection`
+Answers to the Reflection questions:
 ```What could you have done differently during the planning stages of your project to make the execution easier?```
 - Overall, I am satisfied with the overall planning and execution of this project. For the relatively short amount of time that I had, I managed to execute almost all of the functionalities that I wanted to include in the webpage. With more time, and more techniques that I learn in the future, I can make the website even more interactive and more functional. 
 
