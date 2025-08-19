@@ -178,3 +178,14 @@ matches.appendChild(docFrag);
 console.log(matches);
 };
 //======================================================================================================
+// Add responsiveness to all links and buttons
+const links = document.querySelectorAll("a");
+console.log(links)
+
+links.forEach(link => {
+    link.addEventListener("click", (event) => {
+        links.forEach(lnk => lnk.classList.remove("active"));
+
+        event.target.classList.add("active");
+    });
+})
